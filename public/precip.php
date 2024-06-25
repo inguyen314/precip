@@ -77,7 +77,7 @@ $current_date_time   = date("Y-m-d H:i", $time);
                                         <!-- <div class="alert">
                                             <strong>May 01, 2024 - Version V2.0</strong> - This report was build using PHP, CWMS and JavaScript, no coldfusion schema was used<br>
                                             <strong>June 03, 2024 - Version V2.1</strong> - gage_control3.json was used <br> 
-                                            <strong>June 03, 2024 - Version V2.2</strong> - php-data-api was used <br>
+                                            <strong>June 03, 2024 - Version V2.2</strong> - php_data_api was used <br>
                                         </div> -->
                                         <div id="legend"></div>
                                         <script>

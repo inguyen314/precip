@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loadingIndicator.style.display = 'block';
 
     // Gage control json file URL
-    const jsonFileURL = 'https://wm.mvs.ds.usace.army.mil/php-data-api/public/json/gage_control.json';
+    const jsonFileURL = 'https://wm.mvs.ds.usace.army.mil/php_data_api/public/json/gage_control.json';
     console.log('jsonFileURL: ', jsonFileURL);
     
     // Fetch JSON data from the specified URL
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Process each item and call the second fetch
                 const basin = item.basin;
 
-                const secondFetchUrl = `https://wm.mvs.ds.usace.army.mil/php-data-api/public/get_gage_control_by_basin.php?basin=${basin}`;
+                const secondFetchUrl = `https://wm.mvs.ds.usace.army.mil/php_data_api/public/get_gage_control_by_basin.php?basin=${basin}`;
                 console.log('secondFetchUrl:', secondFetchUrl);
 
                 // Return the fetch promise
@@ -201,7 +201,7 @@ function fetchAndUpdateData(location_id, tsid_precip_raw, station, row) {
     console.log('queryString:', queryString);
 
     // Make an AJAX request to the PHP script, passing all the variables
-    const url = `https://wm.mvs.ds.usace.army.mil/php-data-api/public/get_precip.php?${queryString}`;
+    const url = `https://wm.mvs.ds.usace.army.mil/php_data_api/public/get_precip.php?${queryString}`;
     console.log('url:', url);
 
     fetch(url)
