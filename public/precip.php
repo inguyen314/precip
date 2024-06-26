@@ -64,7 +64,7 @@ $current_date_time   = date("Y-m-d H:i", $time);
 						<div id="topPane" class="col-md backend-cp-collapsible">
 							<div class="box-usace">
 								<h2 class="box-header-striped">
-									<span class="titleLabel title">Precip <?php if ($type=="inc") { echo "Incremental"; } else if ($type=="cum") { echo "Cummulative"; } ?> - <?php echo $basin; ?> PHP V2.2</span>
+									<span class="titleLabel title">Precip <?php if ($type=="inc") { echo "Incremental"; } else if ($type=="cum") { echo "Cummulative"; } ?> <?php echo $basin; ?> PHP</span>
 									<span class="rss"></span>
 								</h2>
 								<div class="box-content" style="background-color:white;margin:auto">
@@ -74,11 +74,6 @@ $current_date_time   = date("Y-m-d H:i", $time);
                                         <span><h3><a href='precip.php?basin=Mississippi&type=<?php if ($type=="inc") { echo "inc"; } else if ($type=="cum") { echo "cum"; } ?>'>Switch to PHP</a></h3></span> 
                                         <span><h3><a href='precip.html?basin=Mississippi&type=<?php if ($type=="inc") { echo "inc"; } else if ($type=="cum") { echo "cum"; } ?>&cda=internal'>Switch to Cloud Internal</a></h3></span>
                                         <span><h3><a href='precip.html?basin=Mississippi&type=<?php if ($type=="inc") { echo "inc"; } else if ($type=="cum") { echo "cum"; } ?>&cda=public'>Switch to Cloud Public</a></h3></span>
-                                        <!-- <div class="alert">
-                                            <strong>May 01, 2024 - Version V2.0</strong> - This report was build using PHP, CWMS and JavaScript, no coldfusion schema was used<br>
-                                            <strong>June 03, 2024 - Version V2.1</strong> - gage_control3.json was used <br> 
-                                            <strong>June 03, 2024 - Version V2.2</strong> - php_data_api was used <br>
-                                        </div> -->
                                         <div id="legend"></div>
                                         <script>
                                             // Create table element
@@ -113,24 +108,6 @@ $current_date_time   = date("Y-m-d H:i", $time);
                                             document.getElementById("legend").appendChild(table);
                                         </script>
                                         <table id="precip_title">
-                                            <!-- <tr>
-                                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                                <td class="precip_equal_0_legend">#FFFFFF</td>
-                                                <td style="text-align: center">Zero<br>Precip.</td>
-                                                <td class='precip_greater_0_legend'>#FFFFFF</td>
-                                                <td style="text-align: center">Low<br>0.00-0.25</td>
-                                                <td class='precip_greater_25_legend'>#FFFFFF</td>
-                                                <td style="text-align: center">Low-Med<br>0.25-0.50</td>
-                                                <td class='precip_greater_50_legend'>#FFFFFF</td>
-                                                <td style="text-align: center">Med-High<br>0.50-1.00</td>
-                                                <td class='precip_greater_100_legend'>#FFFFFF</td>
-                                                <td style="text-align: center">High<br>1.00-2.00</td>
-                                                <td class='precip_missing_legend'>#FFFFFF</td>
-                                                <td style="text-align: center">Missing<br>Data</td>
-                                                <td class='precip_greater_200_legend'>#FFFFFF</td>
-                                                <td style="text-align: center">Over<br>Limit</td>
-                                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                            </tr> -->
                                             <tr>
                                                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
