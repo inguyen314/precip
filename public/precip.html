@@ -54,16 +54,16 @@
                 const cda = urlParams.get('cda');
                 let title;
                 if (type === 'inc') {
-                    title = "Precip Incremental" + " - " + urlParams.get('basin') + " - " + urlParams.get('cda');
+                    title = "Precip Incremental" + " " + urlParams.get('basin') + " " + urlParams.get('cda');
                 } else if (type === 'cum') {
-                    title = "Precip Cummulative" + " - " + urlParams.get('basin') + " - " + urlParams.get('cda');
+                    title = "Precip Cummulative" + " " + urlParams.get('basin') + " " + urlParams.get('cda');
                 }
     
                 if (title) {
                     document.title = title;
                     const titleSpan = document.querySelector('.titleLabel.title');
                     if (titleSpan) {
-                        titleSpan.textContent = title + " CDA V1.1";
+                        titleSpan.textContent = title + " ";
                     }
                 }
 
