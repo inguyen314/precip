@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const loadingIndicator = document.getElementById('loading_precip');
     loadingIndicator.style.display = 'block';
 
-    console.log('Loading CDA Version 1.0');
-
     // Gage control json file
     let jsonFileURL = null;
     if (cda === "public") {
@@ -41,23 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Print the extracted data for selected basin
             console.log('basinData: ', basinData);
 
-            // Function to filter locations with report_precip === true
-            function filterLocations(data) {
-                const filteredData = [];
-                data.forEach(item => {
-                    const filteredItem = { basin: item.basin, gages: [] };
-                    item.gages.forEach(gage => {
-                        if (gage.report_precip === true) {
-                            filteredItem.gages.push(gage);
-                        }
-                    });
-                    if (filteredItem.gages.length > 0) { // At least one gage with report_precip === true
-                        filteredData.push(filteredItem);
-                    }
-                });
-                return filteredData;
-            }
-
             // Filter the data
             const filteredData = filterLocations(basinData);
 
@@ -77,6 +58,23 @@ document.addEventListener('DOMContentLoaded', function () {
             loadingIndicator.style.display = 'none';
         });
 });
+
+// Function to filter locations with report_precip === true
+function filterLocations(data) {
+    const filteredData = [];
+    data.forEach(item => {
+        const filteredItem = { basin: item.basin, gages: [] };
+        item.gages.forEach(gage => {
+            if (gage.report_precip === true) {
+                filteredItem.gages.push(gage);
+            }
+        });
+        if (filteredItem.gages.length > 0) { // At least one gage with report_precip === true
+            filteredData.push(filteredItem);
+        }
+    });
+    return filteredData;
+}
 
 // Function to create ld summary table
 function createTable(filteredData) {
@@ -143,7 +141,6 @@ function populateTableCells(filteredData, table) {
         });
     });
 }
-
 
 // Function to fetch ld summary data
 function fetchAndUpdateData(location_id, tsid, row, type, cda, river_mile_hard_coded) {
