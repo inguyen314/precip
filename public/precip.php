@@ -18,12 +18,6 @@ if (ini_get('date.timezone')) {
 
 $basin = $_GET['basin'] ?? null;
 $type = $_GET['type'] ?? null;
-
-$now =  date('Y-m-d H:i');
-$time   = strtotime($now);
-$current_date =  date('m-d-Y');
-$current_date_time_format =  date('m-d-Y H:i');
-$current_date_time   = date("Y-m-d H:i", $time);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +64,6 @@ $current_date_time   = date("Y-m-d H:i", $time);
 								<div class="box-content" style="background-color:white;margin:auto">
 									<div class="content">
 										<!-- Box Content Here -->
-										<span>Last Modified:<?php echo " " . $current_date_time ?></span> 
                                         <span><h3><a href='precip.php?basin=Mississippi&type=<?php if ($type=="inc") { echo "inc"; } else if ($type=="cum") { echo "cum"; } ?>'>Switch to PHP</a></h3></span> 
                                         <span><h3><a href='precip.html?basin=Mississippi&type=<?php if ($type=="inc") { echo "inc"; } else if ($type=="cum") { echo "cum"; } ?>&cda=internal'>Switch to Cloud Internal</a></h3></span>
                                         <span><h3><a href='precip.html?basin=Mississippi&type=<?php if ($type=="inc") { echo "inc"; } else if ($type=="cum") { echo "cum"; } ?>&cda=public'>Switch to Cloud Public</a></h3></span>

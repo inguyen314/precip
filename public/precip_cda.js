@@ -192,7 +192,7 @@ function fetchAndUpdateData(location_id, tsid, row, type, cda, river_mile_hard_c
                     // RIVER MILE
                     const riverMileCell = row.insertCell();
                     if (river_mile_hard_coded !== null) {
-                        riverMileCell.innerHTML = "<span style='background-color: orange;' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
+                        riverMileCell.innerHTML = "<span class='hard_coded' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
                     } else {
                         riverMileCell.innerHTML = '<div style="background-color: orange;"></div>';
                     }
@@ -308,7 +308,7 @@ function fetchAndUpdateData(location_id, tsid, row, type, cda, river_mile_hard_c
                     // DATE TIME
                     const riverMileCell = row.insertCell();
                     if (river_mile_hard_coded !== null) {
-                        riverMileCell.innerHTML = "<span style='background-color: orange;' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
+                        riverMileCell.innerHTML = "<span class='hard_coded' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
                     } else {
                         riverMileCell.innerHTML = '<div style="background-color: orange;"></div>';
                     }
@@ -374,7 +374,7 @@ function fetchAndUpdateData(location_id, tsid, row, type, cda, river_mile_hard_c
                     // DATE TIME
                     const riverMileCell = row.insertCell();
                     if (river_mile_hard_coded !== null) {
-                        riverMileCell.innerHTML = "<span style='background-color: orange;' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
+                        riverMileCell.innerHTML = "<span class='hard_coded' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
                     } else {
                         riverMileCell.innerHTML = '<div style="background-color: orange;"></div>';
                     }
@@ -439,7 +439,7 @@ function fetchAndUpdateData(location_id, tsid, row, type, cda, river_mile_hard_c
                     // DATE TIME
                     const riverMileCell = row.insertCell();
                     if (river_mile_hard_coded !== null) {
-                        riverMileCell.innerHTML = "<span style='background-color: orange;' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
+                        riverMileCell.innerHTML = "<span class='hard_coded' title='Hard Coded in JSON, No Cloud Option Yet'>" + (parseFloat(river_mile_hard_coded)).toFixed(2) + "<span>";
                     } else {
                         riverMileCell.innerHTML = '<div style="background-color: orange;"></div>';
                     }
